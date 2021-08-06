@@ -1,0 +1,461 @@
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ pwd
+/c/Users/Abhishek tiwari/Desktop/projectTracker
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ git version
+git version 2.28.0.windows.1
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ git config --global user.name "Abhishek Tiwari V5735"
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ git config --global user.email "abhishek.tiwari1@mail.vinove.com"
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ git config --global --list
+user.name=Abhishek Tiwari V5735
+user.email=abhishek.tiwari1@mail.vinove.com
+core.editor=code --wait
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ git clone https://github.com/AbhishekTiwari72/git_demo.git
+Cloning into 'git_demo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 630 bytes | 3.00 KiB/s, done.
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ ls
+git_demo/
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker
+$ cd git_demo
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ ls
+README.md
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ echo "<h1>Git Demo</h1>">> index.html
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ ls
+index.html  README.md
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ cat index.html
+<h1>Git Demo</h1>
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git commit -m "Adding Start Html File"
+[main f244f9a] Adding Start Html File
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git push -u origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 320 bytes | 10.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AbhishekTiwari72/git_demo.git
+   60e2db7..f244f9a  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ ls
+index.html  README.md
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ ls
+ assets/   index.html   preview.png   README.md  'Text website travel.txt'
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ cd assets
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo/assets (main)
+$ ls
+css/  img/  js/  scss/  video/
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo/assets (main)
+$ cd ..
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Text website travel.txt
+        assets/
+        preview.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git add assets
+warning: LF will be replaced by CRLF in assets/css/styles.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/css/swiper-bundle.min.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/js/scrollreveal.min.js.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in assets/js/swiper-bundle.min.js.
+The file will have its original line endings in your working directory
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   assets/css/styles.css
+        new file:   assets/css/swiper-bundle.min.css
+        new file:   assets/img/about1.jpg
+        new file:   assets/img/about2.jpg
+        new file:   assets/img/discover1.jpg
+        new file:   assets/img/discover2.jpg
+        new file:   assets/img/discover3.jpg
+        new file:   assets/img/discover4.jpg
+        new file:   assets/img/experience1.jpg
+        new file:   assets/img/experience2.jpg
+        new file:   assets/img/favicon.png
+        new file:   assets/img/home1.jpg
+        new file:   assets/img/home2.jpg
+        new file:   assets/img/place1.jpg
+        new file:   assets/img/place2.jpg
+        new file:   assets/img/place3.jpg
+        new file:   assets/img/place4.jpg
+        new file:   assets/img/place5.jpg
+        new file:   assets/img/sponsors1.png
+        new file:   assets/img/sponsors2.png
+        new file:   assets/img/sponsors3.png
+        new file:   assets/img/sponsors4.png
+        new file:   assets/img/sponsors5.png
+        new file:   assets/js/main.js
+        new file:   assets/js/scrollreveal.min.js
+        new file:   assets/js/swiper-bundle.min.js
+        new file:   assets/scss/styles.scss
+        new file:   assets/video/video.mp4
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Text website travel.txt
+        preview.png
+
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git add index.html
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   assets/css/styles.css
+        new file:   assets/css/swiper-bundle.min.css
+        new file:   assets/img/about1.jpg
+        new file:   assets/img/about2.jpg
+        new file:   assets/img/discover1.jpg
+        new file:   assets/img/discover2.jpg
+        new file:   assets/img/discover3.jpg
+        new file:   assets/img/discover4.jpg
+        new file:   assets/img/experience1.jpg
+        new file:   assets/img/experience2.jpg
+        new file:   assets/img/favicon.png
+        new file:   assets/img/home1.jpg
+        new file:   assets/img/home2.jpg
+        new file:   assets/img/place1.jpg
+        new file:   assets/img/place2.jpg
+        new file:   assets/img/place3.jpg
+        new file:   assets/img/place4.jpg
+        new file:   assets/img/place5.jpg
+        new file:   assets/img/sponsors1.png
+        new file:   assets/img/sponsors2.png
+        new file:   assets/img/sponsors3.png
+        new file:   assets/img/sponsors4.png
+        new file:   assets/img/sponsors5.png
+        new file:   assets/js/main.js
+        new file:   assets/js/scrollreveal.min.js
+        new file:   assets/js/swiper-bundle.min.js
+        new file:   assets/scss/styles.scss
+        new file:   assets/video/video.mp4
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Text website travel.txt
+        preview.png
+
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git add preview.png
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   assets/css/styles.css
+        new file:   assets/css/swiper-bundle.min.css
+        new file:   assets/img/about1.jpg
+        new file:   assets/img/about2.jpg
+        new file:   assets/img/discover1.jpg
+        new file:   assets/img/discover2.jpg
+        new file:   assets/img/discover3.jpg
+        new file:   assets/img/discover4.jpg
+        new file:   assets/img/experience1.jpg
+        new file:   assets/img/experience2.jpg
+        new file:   assets/img/favicon.png
+        new file:   assets/img/home1.jpg
+        new file:   assets/img/home2.jpg
+        new file:   assets/img/place1.jpg
+        new file:   assets/img/place2.jpg
+        new file:   assets/img/place3.jpg
+        new file:   assets/img/place4.jpg
+        new file:   assets/img/place5.jpg
+        new file:   assets/img/sponsors1.png
+        new file:   assets/img/sponsors2.png
+        new file:   assets/img/sponsors3.png
+        new file:   assets/img/sponsors4.png
+        new file:   assets/img/sponsors5.png
+        new file:   assets/js/main.js
+        new file:   assets/js/scrollreveal.min.js
+        new file:   assets/js/swiper-bundle.min.js
+        new file:   assets/scss/styles.scss
+        new file:   assets/video/video.mp4
+        modified:   index.html
+        new file:   preview.png
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Text website travel.txt
+
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git add Text website travel.txt
+fatal: pathspec 'Text' did not match any files
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   assets/css/styles.css
+        new file:   assets/css/swiper-bundle.min.css
+        new file:   assets/img/about1.jpg
+        new file:   assets/img/about2.jpg
+        new file:   assets/img/discover1.jpg
+        new file:   assets/img/discover2.jpg
+        new file:   assets/img/discover3.jpg
+        new file:   assets/img/discover4.jpg
+        new file:   assets/img/experience1.jpg
+        new file:   assets/img/experience2.jpg
+        new file:   assets/img/favicon.png
+        new file:   assets/img/home1.jpg
+        new file:   assets/img/home2.jpg
+        new file:   assets/img/place1.jpg
+        new file:   assets/img/place2.jpg
+        new file:   assets/img/place3.jpg
+        new file:   assets/img/place4.jpg
+        new file:   assets/img/place5.jpg
+        new file:   assets/img/sponsors1.png
+        new file:   assets/img/sponsors2.png
+        new file:   assets/img/sponsors3.png
+        new file:   assets/img/sponsors4.png
+        new file:   assets/img/sponsors5.png
+        new file:   assets/js/main.js
+        new file:   assets/js/scrollreveal.min.js
+        new file:   assets/js/swiper-bundle.min.js
+        new file:   assets/scss/styles.scss
+        new file:   assets/video/video.mp4
+        modified:   index.html
+        new file:   preview.png
+
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git add commit -m "Adding Content"
+error: unknown switch `m'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git commit -a
+[main 87eb3f3] Added new Content
+ 30 files changed, 2806 insertions(+), 17 deletions(-)
+ create mode 100644 assets/css/styles.css
+ create mode 100644 assets/css/swiper-bundle.min.css
+ create mode 100644 assets/img/about1.jpg
+ create mode 100644 assets/img/about2.jpg
+ create mode 100644 assets/img/discover1.jpg
+ create mode 100644 assets/img/discover2.jpg
+ create mode 100644 assets/img/discover3.jpg
+ create mode 100644 assets/img/discover4.jpg
+ create mode 100644 assets/img/experience1.jpg
+ create mode 100644 assets/img/experience2.jpg
+ create mode 100644 assets/img/favicon.png
+ create mode 100644 assets/img/home1.jpg
+ create mode 100644 assets/img/home2.jpg
+ create mode 100644 assets/img/place1.jpg
+ create mode 100644 assets/img/place2.jpg
+ create mode 100644 assets/img/place3.jpg
+ create mode 100644 assets/img/place4.jpg
+ create mode 100644 assets/img/place5.jpg
+ create mode 100644 assets/img/sponsors1.png
+ create mode 100644 assets/img/sponsors2.png
+ create mode 100644 assets/img/sponsors3.png
+ create mode 100644 assets/img/sponsors4.png
+ create mode 100644 assets/img/sponsors5.png
+ create mode 100644 assets/js/main.js
+ create mode 100644 assets/js/scrollreveal.min.js
+ create mode 100644 assets/js/swiper-bundle.min.js
+ create mode 100644 assets/scss/styles.scss
+ create mode 100644 assets/video/video.mp4
+ rewrite index.html (93%)
+ create mode 100644 preview.png
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git push -u origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (38/38), 3.59 MiB | 382.00 KiB/s, done.
+Total 38 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/AbhishekTiwari72/git_demo.git
+   4a55f77..87eb3f3  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git commit -a
+[main 82ac4da] file Updated
+ 1 file changed, 472 insertions(+), 474 deletions(-)
+ rewrite index.html (83%)
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git push -u origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.72 KiB | 110.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/AbhishekTiwari72/git_demo.git
+   87eb3f3..82ac4da  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Abhishek tiwari@DESKTOP-8HH4M2A MINGW64 ~/Desktop/projectTracker/git_demo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
